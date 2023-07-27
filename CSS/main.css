@@ -1,0 +1,99 @@
+@font-face {
+    font-family: F1;
+    src: url("../tools/fonts/Chakra_Petch/ChakraPetch-Regular.ttf");
+}
+@font-face {
+    font-family: F1B;
+    src: url("../tools/fonts/Chakra_Petch/ChakraPetch-Bold.ttf");
+}
+@font-face {
+    font-family: F2;
+    src: url("../tools/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
+}
+@font-face {
+    font-family: F3;
+    src: url("../tools/fonts/Play/Play-Regular.ttf");
+}
+@font-face {
+    font-family: F4;
+    src: url("../tools/fonts/Press_Start_2P/PressStart2P-Regular.ttf")
+}
+@font-face{
+    font-family: F5;
+    src: url("../tools/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+}
+@font-face{
+    font-family: F6;
+    src: url("../tools/fonts/VT323/VT323-Regular.ttf");
+}
+
+li{
+    list-style: none;
+}
+
+#pokemonInfo > img{
+    width: 10rem;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-image: url("../tools/images/23236924.jpg");
+    background-repeat: repeat;
+    background-size: 100%;
+}
+
+header{
+    text-align: center;
+    #Titulo{
+        color: #ffcb05;
+        font-size: 5rem;
+        font-family: F1B;
+        text-shadow: 5px 0px 0px #2a75bb,
+                     0px 5px 0px #2a75bb,
+                     -5px 0px 0px #2a75bb,
+                     0px -5px 0px #2a75bb;
+    }
+}
+
+main{
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border: 15px solid rgba(209, 213, 219, 0.5);
+}
+
+#modalGeneral{
+    background: rgba(255, 255, 255, .8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1.5px solid rgba(209, 213, 219, 0.3);
+}
+
+#imagenPokemon>img{
+    width: 5rem;
+    height: 5rem;
+}
+
+#idPokemon, #nombrePokemon, #tipoPokemon1, #tipoPokemon2, #alturaPokemon,#pesoPokemon{
+    margin: 0px;
+}
+
+.pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #FFFFFF;
+    width: 20%;
+}
+
+.listPokemon{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
