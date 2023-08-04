@@ -13,35 +13,39 @@
         crossorigin="anonymous"></script>
     <script defer src="./JS/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    <link rel="shortcut icon" href="./tools/images/pokebola.png"> 
+
 </head>
 
 <body>
     <header>
-        <h1 id="Titulo" class="bg-danger m-0 ">Pokédex</h1>
+        <a class="text-decoration-none" href="./index.html"><h1 id="Titulo" class="bg-danger m-0 ">Pokédex</h1></a>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid" id="main">
         <!-- Button trigger modal -->
-        <section class="searchContainer row d-flex justify-content-center">
+        <section class="searchContainer row d-flex justify-content-center mb-2">
             <input type="text" id="inputSearch" class="col-8 border-black border-5 border-end-0 rounded-start-5" placeholder="Ingrese el nombre del pokémon">
             <button id="searchButton" class="btn btn-danger col-2 border-black border-5 rounded-end-5" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">Buscar</button>
         </section>
-        <div id="listPokemon" class="listPokemon d-flex flex-wrap align-content-between justify-content-center align-items-center">
-            <!-- <div id="pokemon" class="pokemon bg-white col-3 rounded text-center d-flex flex-wrap flex-column align-content-center justify-content-evenly align-items-stretch">
-                <p id="idPokemon"></p>
-                <p id="nombrePokemon">Pikachu</p>
-                <div id="imagenPokemon">
-                    <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png" alt="pokemonImagen">
-                </div>
-                <div id="informacionPokemon">
-                    <p id="tipoPokemon1">Electrico</p>
-                    <p id="tipoPokemon2">Pelea</p>
-                </div>
-                <div id="estadisticasPokemon">
-                    <p id="alturaPokemon">1.5m</p>
-                    <p id="pesoPokemon">40kg</p>
-                </div>
-            </div>-->
+        <div class="" id="containPokemon">
+            <div id="listPokemon" class="listPokemon d-flex flex-wrap align-content-between justify-content-center align-items-center">
+                <!-- <div id="pokemon" class="pokemon bg-white col-3 rounded text-center d-flex flex-wrap flex-column align-content-center justify-content-evenly align-items-stretch">
+                    <p id="idPokemon"></p>
+                    <p id="nombrePokemon">Pikachu</p>
+                    <div id="imagenPokemon">
+                        <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png" alt="pokemonImagen">
+                    </div>
+                    <div id="informacionPokemon">
+                        <p id="tipoPokemon1">Electrico</p>
+                        <p id="tipoPokemon2">Pelea</p>
+                    </div>
+                    <div id="estadisticasPokemon">
+                        <p id="alturaPokemon">1.5m</p>
+                        <p id="pesoPokemon">40kg</p>
+                    </div>
+                </div>-->
+            </div>
         </div>
 
     </main>

@@ -80,7 +80,16 @@ main{
 #idPokemon, #nombrePokemon, #tipoPokemon1, #tipoPokemon2, #alturaPokemon,#pesoPokemon{
     margin: 0px;
 }
-
+#idPokemon{
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    font-weight: 800;
+    z-index: -1;
+    color: var(--clr-gray);
+}
 .pokemon{
     display: flex;
     flex-wrap: wrap;
@@ -90,10 +99,25 @@ main{
     border-radius: 1rem;
     background-color: #FFFFFF;
     width: 20%;
+    text-decoration: none;
+}.pokemon:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#containPokemon{
+    column-gap: 150px;
 }
 
 .listPokemon{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    
+}
+
+#contenidoPokemon>p, #informacionPokemon > p, #estadisticasPokemon {
+    font-family: F3;
+    text-decoration: none;
+    color: #000000;
 }

@@ -101,9 +101,10 @@ for (let i = 1; i <= 151; i++) {
 }
 
 function mostrarPokemons(pokemon) {
-    const div = document.createElement('div');
+    const div = document.createElement('button');
     div.classList.add("pokemon");
     div.innerHTML = `
+    <div class="d-flex flex-column align-self-center" id="contenidoPokemon">
         <p id="idPokemon">#${pokemon.id}</p>
         <p id="nombrePokemon">${pokemon.name}</p>
         <div id="imagenPokemon">
@@ -117,6 +118,7 @@ function mostrarPokemons(pokemon) {
             <p id="alturaPokemon">${pokemon.height}m</p>
             <p id="pesoPokemon">${pokemon.weight}kg</p>
         </div>
+    </div>
     `;
     listPokemons.append(div);
 }
