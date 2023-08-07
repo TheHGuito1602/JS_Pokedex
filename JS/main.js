@@ -4,11 +4,13 @@ const listPokemons = document.querySelector("#listPokemon");
 const inputSearch = document.querySelector('#inputSearch');
 const searchButton = document.querySelector('#searchButton');
 const pokemonInfo = document.querySelector('#pokemonInfo');
+const pokemonCard = document.querySelector('#nombrePokemon');
 let pokemonStats = null;
 
 function handleRequestSearch(event) {
     /* Saneamiento de entrada: convertimos a minusculas */
     const pokemonName = inputSearch.value.toLowerCase();
+    //const pokemonCart = pokemonCard.value.toLowerCase();
     fetch(`${apiUrl}${pokemonName}`)
         .then(response => {
             console.log("Respuesta: ", response);
@@ -101,7 +103,12 @@ for (let i = 1; i <= 151; i++) {
 }
 
 function mostrarPokemons(pokemon) {
+    const types = pokemon.types.map(type => type.type.name).join(", ");
     const div = document.createElement('button');
+    div.setAttribute("type", "button");
+    div.setAttribute("data-bs-toggle", "modal");
+    div.setAttribute("data-bs-target", "#exampleModal");
+    //div.addEventListener("click", function() {displayPokemon(document.getElementById('nombrePokemon').innerText);});
     div.classList.add("pokemon");
     div.innerHTML = `
     <div class="d-flex flex-column align-self-center" id="contenidoPokemon">
@@ -111,8 +118,7 @@ function mostrarPokemons(pokemon) {
         <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
         </div>
         <div id="informacionPokemon">
-            <p id="tipoPokemon1">Electrico</p>
-            <p id="tipoPokemon2">Pelea</p>
+            <p id="tipoPokemon1">${types}</p>
         </div>
         <div id="estadisticasPokemon">
             <p id="alturaPokemon">${pokemon.height}m</p>
